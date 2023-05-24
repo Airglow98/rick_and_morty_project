@@ -1,3 +1,4 @@
+
 export function createCharacterCard(imgPath, altImgPathDescription, name, status, typeDescription, occurrencesNumber){
     const cardContainer = document.querySelector('[data-js="card-container"]')
     const cardElement = document.createElement('li')
