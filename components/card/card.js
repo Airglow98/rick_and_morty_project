@@ -1,9 +1,9 @@
 export function createCharacterCard(imgPath, altImgPathDescription, name, status, typeDescription, occurrencesNumber){
     const cardContainer = document.querySelector('[data-js="card-container"]')
-    const cardContent = cardContainer.innerHTML;
-    cardContainer.innerHTML = 
-    ` <li class="card">
-      <div class="card__image-container">
+    const cardElement = document.createElement('li')
+    cardElement.classList.add('card')
+     cardElement.innerHTML =
+    `<div class="card__image-container">
         <img
           class="card__image"
           src="${imgPath}"
@@ -21,7 +21,7 @@ export function createCharacterCard(imgPath, altImgPathDescription, name, status
       <dt class="card__info-title">Occurrences</dt>
       <dd class="card__info-description">${occurrencesNumber}</dd>
     </dl>
-    </div>
-    </li>`;
-  return cardContent;
+    </div>`;
+    cardContainer.append(cardElement)
+  return cardElement;
 }

@@ -15,7 +15,6 @@ const page = 1;
 const searchQuery = "";
 
 
-/* createCharacterCard(); */
 
  async function fetchCharacters(){
 try {
@@ -23,7 +22,7 @@ try {
   
   if(response.ok){
   const data = await response.json();
-  console.log(data.results)
+  cardContainer.innerHTML=``;
   data.results.forEach((character)=>{createCharacterCard(character.image,"altText",character.name, character.status, character.type, character.episode.length )})  
   return data;
 } else {
