@@ -2,13 +2,9 @@ import fetchCharacters from "./utils/fetchCharacters.js";
 import Buttons from "./components/nav-button/nav-button.js";
 /* const searchBarContainer = document.querySelector(
   '[data-js="search-bar-container"]'
-); hä?*/
+); ?*/
 const searchBar = document.querySelector('[data-js="search-bar"]');
-/* const navigation = document.querySelector('[data-js="navigation"]'); hö?*/ 
-
-
-
-// States
+/* const navigation = document.querySelector('[data-js="navigation"]'); ?*/ 
 
 let searchQuery = "";
 
